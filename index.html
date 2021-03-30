@@ -224,7 +224,7 @@
                                     <tr>
                                         <th scope="col">Fragment</th>
                                         <th scope="col">Type</th>
-                                        <th scope="col">Score</th>
+                                        <th scope="col">Value</th>
                                         <th scope="col">Subtotal</th>
                                     </tr>
                                 </thead>
@@ -270,7 +270,7 @@
                                         <td>0.0</td>
                                     </tr>                                    
                                     <tr class="table-warning">
-                                        <th scope="row">Each fragmento above 10 will decrease the score in</th>
+                                        <th scope="row">Each fragmento above 10 will increase the penalty in</th>
                                         <td>0.01</td>                                        
                                     </tr>
                                     <tr class="table-danger">
@@ -291,7 +291,7 @@
                             <table class="table">
                                 <thead>
                                     <tr >
-                                        <th scope="col" >Partial Score = Winning Rate - (Winning Rate x 0.4 x Interpretability Score)</th>                                        
+                                        <th scope="col" >Partial Score = Winning Rate - (Winning Rate x 0.4 x Interpretation Penalty)</th>                                        
                                     </tr>
                                 </thead>                                
                             </table>
@@ -305,7 +305,7 @@
                                         <th scope="col">Map</th>
                                         <th scope="col">Strategy</th>                                        
                                         <th scope="col">Winning Rate</th>
-                                        <th scope="col">Interpretability Score</th>
+                                        <th scope="col">Interpretation Penalty</th>
                                         <th scope="col">Partial Score</th>
                                     </tr>
                                 </thead>
@@ -314,15 +314,15 @@
                                         <th scope="row">map 1</th>
                                         <td>C.X.1</td>
                                         <td>90.8</td>
-                                        <td>100.0</td>
+                                        <td>0.0</td>
                                         <td>94.48</td>
                                     </tr>                                    
                                     <tr >
                                         <th scope="row">map 2</th>
                                         <td>C.X.1</td>
                                         <td>82.4</td>
-                                        <td>94.2</td>
-                                        <td>87.12</td>                                        
+                                        <td>0.94</td>
+                                        <td>51.42</td>                                        
                                     </tr>                                    
                                 </tbody>                                
                                 <thead>
@@ -331,7 +331,7 @@
                                         <th scope="col"></th>                                        
                                         <th scope="col"></th>
                                         <th scope="col"></th>
-                                        <th scope="col">90.8</th>
+                                        <th scope="col">72.95</th>
                                     </tr>
                                 </thead>
                             </table>                                                        
