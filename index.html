@@ -271,7 +271,7 @@
                                     </tr>                                    
                                     <tr class="table-warning">
                                         <th scope="row">Each fragmento above 10 will decrease the score in</th>
-                                        <td>1.11</td>                                        
+                                        <td>1.111</td>                                        
                                     </tr>
                                     <tr class="table-danger">
                                         <th scope="row">100 or more</th>
@@ -286,7 +286,60 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Score and Classification</h3>
                             <div class="subheading mb-3">Evaluating projects.</div>
-                            <p></p>
+                            <p>The partial score will be calculated for map, following the function:</p>
+
+                            <table class="table">
+                                <thead>
+                                    <tr >
+                                        <th scope="col" >Partial Score = ((Winning Rate x 6 ) + ( Interpretability Score x 4 ))/10</th>                                        
+                                    </tr>
+                                </thead>                                
+                            </table>
+                            <p>
+                                The partial score is calculated for each map, for each competitor. The total score, value used to define the winner, is defined by the average value of 
+                                all the partial score obtained by the competitor. Let's see one example for the competitor X.
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Map</th>
+                                        <th scope="col">Strategy</th>                                        
+                                        <th scope="col">Winning Rate</th>
+                                        <th scope="col">Interpretability Score</th>
+                                        <th scope="col">Partial Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">map 1</th>
+                                        <td>C.X.1</td>
+                                        <td>90.8</td>
+                                        <td>100.0</td>
+                                        <td>94.48</td>
+                                    </tr>                                    
+                                    <tr >
+                                        <th scope="row">map 2</th>
+                                        <td>C.X.1</td>
+                                        <td>82.4</td>
+                                        <td>94.2</td>
+                                        <td>87.12</td>                                        
+                                    </tr>                                    
+                                </tbody>                                
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Total Score</th>
+                                        <th scope="col"></th>                                        
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">90.8</th>
+                                    </tr>
+                                </thead>
+                            </table>                            
+
+                            <div class="subheading mb-3">Winning Rate</div>                            
+                            The winning rate is defined by the score in a round-robin tournament between all the entries. It means that the final rate is defined by the average value obtained by an entry against
+                            all the other strategies in a specific map. See more details in the MicroRTS AI Competition in the section <a href="https://sites.google.com/site/micrortsaicompetition/rules"  target="_blank">Game Format</a>
+                            or <a href="https://sites.google.com/site/micrortsaicompetition/competition-results"  target="_blank">Competition Results</a>.
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Evaluating rule</span></div>
                     </div>                                    
