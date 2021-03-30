@@ -133,7 +133,7 @@
                             <ul class="list-inline-item">
                                 <li>Step 1: Preparing the project, without the entire microRTS or the framework.</li>
                                 <li>Step 2: Upload your projet to a public GitHub repository. If the entire synthesizer is in the repository, jump to step 4.</li>
-                                <li>Step 3: If you need to add libraries, folders or different contents, compact your synthesizer in a zip, rar ou 7zip file.</li>
+                                <li>Step 3: If you need to add libraries, folders or different contents, compact your synthesizer in a zip, rar or 7zip file.</li>
                                 <li>Step 4: Send all the materials(described above) to the email running@gmail.com.</li>
                             </ul>
                         </div>
@@ -143,7 +143,142 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Interpretability</h3>
                             <div class="subheading mb-3">The importance of being understood.</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+                            <p>
+                                Interpretability is one aspect considered crucial in this competition. We believe that strategies can be helpful to guide programmers and game designers in the task of write scripts for games. To allow professionals 
+                                to read and learn with strategies produced by the synthesizers in the competition, the interpretability characteristic will be a measure to define the winner in this competition. 
+                            </p>
+                            <div class="subheading mb-3">What do we menas with interpretability?</div>
+                            <p>
+                                Our framework allows the solution to be printed in a couple of ways. The table below shows two examples of the same solution to a 8x8 map.
+                                This simple solution is a playable strategy produced by one local search algorithm using the framework. 
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pure String (strategy 1)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>for(u) (if(!HaveUnitsStrongest(Heavy,u)) then(harvest(1,u))) 
+                                            for(u) (if(!HaveQtdEnemiesbyType(Heavy,9)) then(attack(Worker,closest,u)) 
+                                                    if(!HaveUnitsStrongest(Ranged,u))  then(moveaway(Worker,u)) 
+                                                    train(Worker,4,Right)) </td>
+                                        
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tree (preorder traversal)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img-fluid" src="assets/img/treeDSLPreOrder.png" alt =""/>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                The strategy above (strategy 1) looks simple in behavior, however, it requires some effort to be fully understood by any programmer. Let's see an example that requires less effort to be comprehensible.
+                            </p>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pure String (strategy 2)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>harvest(1) train(Worker,50,EnemyDir) if(HaveUnitsToDistantToEnemy(Worker,3)) then(attack(Worker,closest))</td>                                        
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tree (preorder traversal)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img-fluid" src="assets/img/DSLPreOrder2.png" alt =""/>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                This new strategy, calle strategy 2, requires less effort to be understood and it has a behavior acceptable in the MicroRTS against other strategies in 
+                                a map of size 8x8. Our competition encourages simplicity and comprehension in the strategies developed by the synthesizers.
+                            </p>
+
+                            <div class="subheading mb-3">How will the interpretability evaluate?</div>
+                            <p>
+                                In the 1st edition of the competition, we will keep the interpretability as simple as possible. We will count the number of nodes S2, S3, S5, and C in 
+                                the final strategy. It means that we will take into consideration the number of if's, for, booleans, and commands that the strategy has. 
+                                Let's calculate the interpretability score for strategy 2, shown in the table above.
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Fragment</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Score</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">harvest(1), train(Worker,50,EnemyDir), attack(Worker,closest)</th>
+                                        <td>C</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">if() then()</th>
+                                        <td>S2</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        
+                                    </tr>                            
+                                    <tr>
+                                        <th scope="row">HaveUnitsToDistantToEnemy(Worker,3)</th>
+                                        <td>S5</td>
+                                        <td>1</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Total</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p> The final score, considering the number of fragments that your strategy has, is given by the score table below.</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nº of Fragments</th>
+                                        <th scope="col">Score</th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-info">
+                                        <th scope="row"><equal or less than>10</th>
+                                        <td>100.0</td>
+                                    </tr>                                    
+                                    <tr class="table-warning">
+                                        <th scope="row">Each fragmento above 10 will decrease the score in</th>
+                                        <td>1.11</td>                                        
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <th scope="row">100 or more</th>
+                                        <td>0.0</td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Requirement</span></div>
                     </div>
