@@ -50,12 +50,14 @@
                     <div class="subheading mb-5">
                         Welcome to the 1st MicroRTS Competition Track on Programmatic Strategies.                         
                     </div>
-                    <p class="lead mb-5">SynProS is one track in the MicroRTS AI Competition. This track has been created to motivate research questions in the synthesis of strategies (scripts)
+                    <p class="lead mb-5">SynProS is one track in the MicroRTS AI Competition and it follow the same principles and prizes described in the main competition. 
+                        This track has been created to motivate research questions in the synthesis of strategies (scripts)
                         using techniques of program synthesis in a minimalist RTS environment, called MicroRTS. We propose a domain-specific language for specifying programmatic-guided synthesis (SynProS) 
                     problem introduced bellow: </p>
                     <img class="img-fluid" src="assets/img/dsl.png" alt =""/>
                     <p class="lead mb-5"> In the MicroRTS repository, there is a complete framework that implements the DSL to be used as part of the synthesizer that will be created by each competitor.
-                        The repository's wiki contains examples and guidance about how to use the MicroRTS and the framework for this competition. </p>
+                        The repository's wiki contains examples and guidance about how to use the MicroRTS and the framework for this competition. The DSL is 
+                    a standard requirement for the competition, it means that entries with changes in the DSL (commands, structure or syntax) will be discouraged.</p>
                     
                     <div class="subheading mb-5">
                         Important Dates                         
@@ -88,7 +90,7 @@
                         </tbody>
                     </table>
 
-                    <p class="lead mb-5">More informations, please visit the links bellow or contact us!</p>
+                    <p class="lead mb-5">More information, please visit the links bellow or contact us!</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://github.com/santiontanon/microrts" target="_blank"><i class="fab fa-github" ></i></a>
                         <a class="social-icon" href="https://github.com/santiontanon/microrts/wiki" target="_blank"><i class="fab fa-wikipedia-w" ></i></a>
@@ -103,10 +105,11 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Competition Format and Resources Available</h3>
-                            <div class="subheading mb-3">Specifications of the computational resources to be used.</div>
-                            <p> The program synthesis competition is organized with one track. The track is composed with different maps. Each participant is allowed to send a 
-                                synthesizer that will be used by the organizers to generate one strategy (script) for each map. The synthesizer will run following the limitations 
-                                described below. After the time allowed for each participant, the synthesizer needs to output one strategy. The final strategy, for each map, will be
+                            <div class="subheading mb-3">Specifications of the computational resources that will be used.</div>
+                            <p> The program synthesis competition is organized with one track. The track is composed of different maps (the same maps that the main competition).
+                                 Each participant is allowed to send a synthesizer that will be used by the organizers to generate one strategy (script) for each map. 
+                                 The synthesizer will run following the limitations described below. After the time allowed for each participant is exhausted, 
+                                 the synthesizer needs to output one strategy. The final strategy, for each map, will be
                                 evaluated following some rules. See the section Score for more information.
                             </p>                                    
                             <p>The competition will be run on machines running Unix-based OS to guarantee a better overcome and response time. Each participant will have access to 
@@ -131,11 +134,20 @@
                                 To send your synthesizer, the participant can follow the steps bellow:
                             </p>
                             <ul class="list-inline-item">
-                                <li>Step 1: Preparing the project, without the entire microRTS or the framework.</li>
+                                <li>Step 1: Preparing your project: You can send your entire project or just your synthesizer, if you prefer! Remember that 
+                                    your synthesizer needs to provide a serialized file (using the class SerializableController to save your files) as output. 
+                                    This file needs to be compatible with the original framework, which means that you can't include new commands or changes
+                                    the DSL. 
+                                </li>
                                 <li>Step 2: Upload your project to a public GitHub repository. If the entire synthesizer is in the repository, jump to step 4.</li>
                                 <li>Step 3: If you need to add libraries, folders, or different contents, compact your synthesizer in a zip, rar, or 7zip file.</li>
-                                <li>Step 4: Send all the materials(described above) to the email needs_to_define>@gmail.com.</li>
+                                <li>Step 4: Send the necessary files, jars, classes and settings  described above to the email needs_to_define>@gmail.com. 
+                                    You can choose to send just your GitHub repository with the project and classes that compose your synthesizer, or you
+                                    send a compacted file (zip, rar or 7zip) with your synthesizer and all necessary settings + your GitHub Project.   
+                                </li>                                
                             </ul>
+                            <p> All the artifacts send to the competition will be tested before the competition starts to verify if there isn't any issue to 
+                                run the synthesizers. We thank if you can send additional information to help us in run your synthesizer.  </p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">Submission requirement</span></div>
                     </div>
@@ -144,10 +156,10 @@
                             <h3 class="mb-0">Interpretability</h3>
                             <div class="subheading mb-3">The importance of being understood.</div>
                             <p>
-                                Interpretability is one aspect considered crucial in this competition. We believe that strategies can be helpful to guide programmers and game designers in the task of write scripts for games. To allow professionals 
+                                Interpretability is one aspect considered crucial in this competition. We believe that strategies can be helpful to guide programmers and game designers in the task of writing scripts for games. To allow professionals 
                                 to read and learn with strategies produced by the synthesizers in the competition, the interpretability characteristic will be a measure to define the winner in this competition. 
                             </p>
-                            <div class="subheading mb-3">What do we means with interpretability?</div>
+                            <div class="subheading mb-3">What do we mean with interpretability?</div>
                             <p>
                                 Our framework allows the solution to be printed in a couple of ways. The table below shows two examples of the same solution to a 8x8 map.
                                 This simple solution is a playable strategy produced by one local search algorithm using the framework. 
@@ -181,7 +193,7 @@
                                 </tbody>
                             </table>
                             <p>
-                                The strategy above (strategy 1) looks simple in behavior, however, it requires some effort to be fully understood by any programmer. Let's see an example that requires less effort to be comprehensible.
+                                The strategy above (strategy 1) looks simple in behavior, however, it requires some effort to be fully understood by any programmer. See the example below that requires less effort to be comprehensible.
                             </p>
 
                             <table class="table">
@@ -213,11 +225,11 @@
                                 a map of size 8x8. Our competition encourages simplicity and comprehension in the strategies developed by the synthesizers.
                             </p>
 
-                            <div class="subheading mb-3">How will the interpretability evaluate?</div>
+                            <div class="subheading mb-3">How will the interpretability be evaluated?</div>
                             <p>
                                 In the 1st edition of the competition, we will keep the interpretability as simple as possible. We will count the number of nodes S2, S3, S5, and C in 
                                 the final strategy. It means that we will take into consideration the number of if's, for, booleans, and commands that the strategy has. 
-                                Let's calculate the interpretability score for strategy 2, shown in the table above.
+                                See as example the process of calculate the interpretability score for strategy 2, shown in the table above.
                             </p>
                             <table class="table">
                                 <thead>
@@ -270,7 +282,7 @@
                                         <td>0.0</td>
                                     </tr>                                    
                                     <tr class="table-warning">
-                                        <th scope="row">Each fragmento above 10 will increase the penalty in</th>
+                                        <th scope="row">Each fragment above 10 will increase the penalty in</th>
                                         <td>0.01</td>                                        
                                     </tr>
                                     <tr class="table-danger">
@@ -286,7 +298,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Score and Classification</h3>
                             <div class="subheading mb-3">Evaluating projects.</div>
-                            <p>The partial score will be calculated for map, following the function:</p>
+                            <p>The partial score will be calculated by map, following the function:</p>
 
                             <table class="table">
                                 <thead>
@@ -297,7 +309,7 @@
                             </table>
                             <p>
                                 The partial score is calculated for each map, for each competitor. The total score, the value used to define the winner, is defined by the average value of 
-                                all the partial scores obtained by the competitor. Let's see one example for competitor X.
+                                all the partial scores obtained by the competitor. For example, following the example below for competitor X.
                             </p>
                             <table class="table">
                                 <thead>
@@ -335,8 +347,8 @@
                                     </tr>
                                 </thead>
                             </table>                                                        
-                            <div class="subheading mb-3">Winning Rate</div>                            
-                            <p>The winning rate is defined by the score in a round-robin tournament between all the entries. It means that the final rate is defined by the average value obtained by an entry against
+                            <div class="subheading mb-3">How the Winning Rate will be calculated.</div>                            
+                            <p>The winning rate is defined by the score in a round-robin tournament between all the entries. It means that the final rate will be defined by the average value obtained by an entry against
                                 all the other strategies in a specific map. See more details in the MicroRTS AI Competition in the section <a href="https://sites.google.com/site/micrortsaicompetition/rules"  target="_blank">Game Format</a>
                                 or <a href="https://sites.google.com/site/micrortsaicompetition/competition-results"  target="_blank">Competition Results</a>.
                             </p>
@@ -347,12 +359,12 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Other Rules</h3>
-                            <div class="subheading mb-3">Additional Informations.</div>
+                            <div class="subheading mb-3">Additional Information.</div>
                             <p>.</p>
                             <ul class="list-inline-item">
-                                <li>The competition is open source: to be accepted, participants need to submit the URL where the source code of their bot can be downloaded. This is the same rule as MicroRTS AI Competition.</li>
+                                <li>The competition is open source: to be accepted, participants need to submit the URL where the source code of their bot can be downloaded. This is the same rule like the MicroRTS AI Competition.</li>
                                 <li>In addition to the competition entries, one baseline will be used (see Publications).</li>
-                                <li>Finding and reporting microRTS, DSL or Framework bugs is welcome and encouraged, but exploiting unreported bugs for gaining an advantage will result in disqualification. 
+                                <li>Finding and reporting microRTS, DSL, or Framework bugs is welcome and encouraged, but exploiting unreported bugs for gaining an advantage will result in disqualification. 
                                     Remember that the goal of this competition is to advance science, not to win.</li>
                                 <li>The Round-Robin tournament will be executed with the same settings that are used by the "classic" track of the MicroRTS AI Competition, with simultaneous and durative actions 
                                     and using a deterministic and fully-observable environment.
@@ -381,7 +393,7 @@
                                 Also, for some AI techniques, one needs to know the exact details of the transition function used in the game, which is not available for some of those games.
                             See bellow a MicroRTS image.</div>
                             <img class="img-fluid" src="assets/img/microRTS.png" alt =""/>
-                            <p>For more informations see the  
+                            <p>For more information see the  
                                 <a href="https://sites.google.com/site/micrortsaicompetition/" target="_blank">MicroRTS AI competition</a>
                                 or the <a href="https://github.com/santiontanon/microrts" target="_blank">MicroRTS repository</a>.
                             </p>
@@ -394,11 +406,11 @@
             <!-- DSL Wiki-->
             <section class="resume-section" id="wiki">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">General Informations and Wiki</h2>
+                    <h2 class="mb-5">General Information and Wiki</h2>
                     <p> We wrote a GitHub wiki with examples and guidance about the DSL and the framework developed to the competition as part of the MicroRTS wiki. We strongly suggest the 
-                        participants to check this wiki and examples to improve the experience with the framework. See 
+                        participants to check this wiki and examples to improve the expertise in the usability around and with the framework. See 
                         <a href="https://github.com/santiontanon/microrts/wiki"  target="_blank">GitHub Wiki</a>.
-                    Bellow, we summarized some general informations about the resources that are required in the competition and allowed the synthesizer.</p>
+                    Bellow, we summarized some general information about the resources that are required in the competition and allowed the synthesizer.</p>
                     <div class="subheading mb-3">Programming Languages and Resources</div>
                     <ul class="list-inline dev-icons">
                         <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Java language as default language."><i class="fab fa-java"></i></li>
@@ -411,16 +423,16 @@
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            The synthesizer will run for 24 hours in an specific map to synthesis a programmatic strategy.
+                            The synthesizer will run for 24 hours in a specific map to synthesis a programmatic strategy.
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            When all synthesizers finished the synthesis phase, all the programmatic strategies will be splitted by maps. 
+                            When all synthesizers finished the synthesis phase, all the programmatic strategies will be split by maps. 
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
                             The programmatic strategies are evaluated combining two scores: A score in a Round-Robin tournament against the other programmatic strategies in 
-                            the specific map and the score obtained in the interpretable evaluation.
+                            the specific map and the score obtained in the interpretability evaluation.
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
