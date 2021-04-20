@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SynProS - Synthesis of Programmatic Strategies</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- <link href="css/styles2.css" rel="stylesheet" /> -->
+        <!-- $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+          }) -->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">SynProS - Synthesis of Programmatic Strategies Competition</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#rules">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#microrts">MicroRTS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wiki">Wiki</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        SynProS
+                        <span class="text-primary">- Synthesis of Programmatic Strategies</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Welcome to the 1st MicroRTS Competition Track on Programmatic Strategies.                         
+                    </div>
+                    <p class="lead mb-5">SynProS is one track in the MicroRTS AI Competition and it follow the same principles and prizes described in the main competition. 
+                        This track has been created to motivate research questions in the synthesis of strategies (scripts)
+                        using techniques of program synthesis in a minimalist RTS environment, called MicroRTS. We propose a domain-specific language for specifying programmatic-guided synthesis (SynProS) 
+                    problem introduced bellow: </p>
+                    <img class="img-fluid" src="assets/img/dsl.png" alt =""/>
+                    <p class="lead mb-5"> In the MicroRTS repository, there is a complete framework that implements the DSL to be used as part of the synthesizer that will be created by each competitor.
+                        The repository's wiki contains examples and guidance about how to use the MicroRTS and the framework for this competition. The DSL is 
+                    a standard requirement for the competition, it means that entries with changes in the DSL (commands, structure or syntax) will be discouraged.</p>
+                    
+                    <div class="subheading mb-5">
+                        Important Dates                         
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1 July 2021</th>
+                                <td>Deadline for submitting synthesizers</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8 July 2021</th>
+                                <td>Deadline for submitting the GitHub repository with description<tr>
+                                
+                            </tr>                            
+                            <tr>
+                                <th scope="row">9 July 2021</th>
+                                <td>Confirmation of all the competitors accepted</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">30 July 2021</th>
+                                <td>Notification of results to authors</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="lead mb-5">More information, please visit the links bellow or contact us!</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://github.com/santiontanon/microrts" target="_blank"><i class="fab fa-github" ></i></a>
+                        <a class="social-icon" href="https://github.com/santiontanon/microrts/wiki" target="_blank"><i class="fab fa-wikipedia-w" ></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="rules">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Rules</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Competition Format and Resources Available</h3>
+                            <div class="subheading mb-3">Specifications of the computational resources that will be used.</div>
+                            <p> The program synthesis competition is organized with one track. The track is composed of different maps (the same maps that the main competition).
+                                 Each participant is allowed to send a synthesizer that will be used by the organizers to generate one strategy (script) for each map. 
+                                 The synthesizer will run following the limitations described below. After the time allowed for each participant is exhausted, 
+                                 the synthesizer needs to output one strategy. The final strategy, for each map, will be
+                                evaluated following some rules. See the section Score for more information.
+                            </p>                                    
+                            <p>The competition will be run on machines running Unix-based OS to guarantee a better overcome and response time. Each participant will have access to 
+                                the following resources:
+                            </p>
+                            <ul class="list-inline-item">
+                                <li>Time limit for each map: 24 hours.</li>
+                                <li>CPU usage: Maximum of 8 CPU's will be available to parallel processing.</li>
+                                <li>Memory: Maximum of 16 GB's of memory.</li>
+                                <li>GPU: Unfortunately it will not be available in this edition.</li>
+                                <li>Disk Space: Maximum of 1 GB in disk.</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Limitation condition</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">The Synthesizer and Submission</h3>
+                            <div class="subheading mb-3">The project to be evaluated in the competition.</div>
+                            <p>Each participant can send different synthesizers to the competition. We encourage submissions from the same participant or group, if the synthesizer contains 
+                                improvements or differentiation between the submissions. Submissions with the same code just with small changes and tunings will be replaced by the last entry. 
+                                To send your synthesizer, the participant can follow the steps bellow:
+                            </p>
+                            <ul class="list-inline-item">
+                                <li>Step 1: Preparing your project: You can send your entire project or just your synthesizer, if you prefer! Remember that 
+                                    your synthesizer needs to provide a serialized file (using the class SerializableController to save your files) as output. 
+                                    This file needs to be compatible with the original framework, which means that you can't include new commands or changes
+                                    the DSL. 
+                                </li>
+                                <li>Step 2: Upload your project to a public GitHub repository. If the entire synthesizer is in the repository, jump to step 4.</li>
+                                <li>Step 3: If you need to add libraries, folders, or different contents, compact your synthesizer in a zip, rar, or 7zip file.</li>
+                                <li>Step 4: Send the necessary files, jars, classes and settings  described above to the email needs_to_define>@gmail.com. 
+                                    You can choose to send just your GitHub repository with the project and classes that compose your synthesizer, or you
+                                    send a compacted file (zip, rar or 7zip) with your synthesizer and all necessary settings + your GitHub Project.   
+                                </li>                                
+                            </ul>
+                            <p> All the artifacts send to the competition will be tested before the competition starts to verify if there isn't any issue to 
+                                run the synthesizers. We thank if you can send additional information to help us in run your synthesizer.  </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Submission requirement</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Interpretability</h3>
+                            <div class="subheading mb-3">The importance of being understood.</div>
+                            <p>
+                                Interpretability is one aspect considered crucial in this competition. We believe that strategies can be helpful to guide programmers and game designers in the task of writing scripts for games. To allow professionals 
+                                to read and learn with strategies produced by the synthesizers in the competition, the interpretability characteristic will be a measure to define the winner in this competition. 
+                            </p>
+                            <div class="subheading mb-3">What do we mean with interpretability?</div>
+                            <p>
+                                Our framework allows the solution to be printed in a couple of ways. The table below shows two examples of the same solution to a 8x8 map.
+                                This simple solution is a playable strategy produced by one local search algorithm using the framework. 
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pure String (strategy 1)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>for(u) (if(!HaveUnitsStrongest(Heavy,u)) then(harvest(1,u))) 
+                                            for(u) (if(!HaveQtdEnemiesbyType(Heavy,9)) then(attack(Worker,closest,u)) 
+                                                    if(!HaveUnitsStrongest(Ranged,u))  then(moveaway(Worker,u)) 
+                                                    train(Worker,4,Right)) </td>
+                                        
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tree (preorder traversal)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img-fluid" src="assets/img/treeDSLPreOrder.png" alt =""/>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                The strategy above (strategy 1) looks simple in behavior, however, it requires some effort to be fully understood by any programmer. See the example below that requires less effort to be comprehensible.
+                            </p>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Pure String (strategy 2)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>harvest(1) train(Worker,50,EnemyDir) if(HaveUnitsToDistantToEnemy(Worker,3)) then(attack(Worker,closest))</td>                                        
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Tree (preorder traversal)</th>                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img-fluid" src="assets/img/DSLPreOrder2.png" alt =""/>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                This new strategy, called strategy 2, requires less effort to be understood and it has a behavior acceptable in the MicroRTS against other strategies in 
+                                a map of size 8x8. Our competition encourages simplicity and comprehension in the strategies developed by the synthesizers.
+                            </p>
+
+                            <div class="subheading mb-3">How will the interpretability be evaluated?</div>
+                            <p>
+                                In the 1st edition of the competition, we will keep the interpretability as simple as possible. We will count the number of nodes S2, S3, S5, and C in 
+                                the final strategy. It means that we will take into consideration the number of if's, for, booleans, and commands that the strategy has. 
+                                See as example the process of calculate the interpretability score for strategy 2, shown in the table above.
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Fragment</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Value</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">harvest(1), train(Worker,50,EnemyDir), attack(Worker,closest)</th>
+                                        <td>C</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">if() then()</th>
+                                        <td>S2</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        
+                                    </tr>                            
+                                    <tr>
+                                        <th scope="row">HaveUnitsToDistantToEnemy(Worker,3)</th>
+                                        <td>S5</td>
+                                        <td>1</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Total</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p> The final score, or penalty, considering the number of fragments that your strategy has, is given by the score table below.</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nº of Fragments</th>
+                                        <th scope="col">Penalty</th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-info">
+                                        <th scope="row">equal or less than 10</th>
+                                        <td>0.0</td>
+                                    </tr>                                    
+                                    <tr class="table-warning">
+                                        <th scope="row">Each fragment above 10 will increase the penalty in</th>
+                                        <td>0.01</td>                                        
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <th scope="row">100 or more</th>
+                                        <td>1.0</td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Requirement</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Score and Classification</h3>
+                            <div class="subheading mb-3">Evaluating projects.</div>
+                            <p>The partial score will be calculated by map, following the function:</p>
+
+                            <table class="table">
+                                <thead>
+                                    <tr >
+                                        <th scope="col" >Partial Score = Winning Rate - (Winning Rate x 0.4 x Interpretation Penalty)</th>                                        
+                                    </tr>
+                                </thead>                                
+                            </table>
+                            <p>
+                                The partial score is calculated for each map, for each competitor. The total score, the value used to define the winner, is defined by the average value of 
+                                all the partial scores obtained by the competitor. For example, following the example below for competitor X.
+                            </p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Map</th>
+                                        <th scope="col">Strategy</th>                                        
+                                        <th scope="col">Winning Rate</th>
+                                        <th scope="col">Interpretation Penalty</th>
+                                        <th scope="col">Partial Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">map 1</th>
+                                        <td>C.X.1</td>
+                                        <td>90.8</td>
+                                        <td>0.0</td>
+                                        <td>94.48</td>
+                                    </tr>                                    
+                                    <tr >
+                                        <th scope="row">map 2</th>
+                                        <td>C.X.1</td>
+                                        <td>82.4</td>
+                                        <td>0.94</td>
+                                        <td>51.42</td>                                        
+                                    </tr>                                    
+                                </tbody>                                
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Total Score</th>
+                                        <th scope="col"></th>                                        
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">72.95</th>
+                                    </tr>
+                                </thead>
+                            </table>                                                        
+                            <div class="subheading mb-3">How the Winning Rate will be calculated.</div>                            
+                            <p>The winning rate is defined by the score in a round-robin tournament between all the entries. It means that the final rate will be defined by the average value obtained by an entry against
+                                all the other strategies in a specific map. See more details in the MicroRTS AI Competition in the section <a href="https://sites.google.com/site/micrortsaicompetition/rules"  target="_blank">Game Format</a>
+                                or <a href="https://sites.google.com/site/micrortsaicompetition/competition-results"  target="_blank">Competition Results</a>.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Evaluating rule</span></div>
+                    </div>                            
+                           
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Other Rules</h3>
+                            <div class="subheading mb-3">Additional Information.</div>
+                            <p>.</p>
+                            <ul class="list-inline-item">
+                                <li>The competition is open source: to be accepted, participants need to submit the URL where the source code of their bot can be downloaded. This is the same rule like the MicroRTS AI Competition.</li>
+                                <li>In addition to the competition entries, one baseline will be used (see Publications).</li>
+                                <li>Finding and reporting microRTS, DSL, or Framework bugs is welcome and encouraged, but exploiting unreported bugs for gaining an advantage will result in disqualification. 
+                                    Remember that the goal of this competition is to advance science, not to win.</li>
+                                <li>The Round-Robin tournament will be executed with the same settings that are used by the "classic" track of the MicroRTS AI Competition, with simultaneous and durative actions 
+                                    and using a deterministic and fully-observable environment.
+                                </li>
+                                <li> The Round-Robin tournament will be performed using the same format that is described by the MicroRTS AI Competition in the section 
+                                    <a href="https://sites.google.com/site/micrortsaicompetition/rules"  target="_blank">Game Format</a>.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">General Information</span></div>
+                    </div>                                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- MicroRTS-->
+            <section class="resume-section" id="microrts">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">MicroRTS</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">A minimalist RTS game implemented in Java.</h3>
+                            <div class="subheading mb-3">MicroRTS is an RTS game developed for research purposes that is actively used as a competition testbed 
+                                for  evaluating  and  comparing  state-of-the-art  approaches.</div>
+                            <div>MicroRTS is a very simple Java implementation of an RTS game designed to test AI techniques. The motivation to create microRTS was to be able to 
+                                test simple AI techniques without having to invest the high development time that is required to start working with Wargus or Starcraft using BWAPI. 
+                                Also, for some AI techniques, one needs to know the exact details of the transition function used in the game, which is not available for some of those games.
+                            See bellow a MicroRTS image.</div>
+                            <img class="img-fluid" src="assets/img/microRTS.png" alt =""/>
+                            <p>For more information see the  
+                                <a href="https://sites.google.com/site/micrortsaicompetition/" target="_blank">MicroRTS AI competition</a>
+                                or the <a href="https://github.com/santiontanon/microrts" target="_blank">MicroRTS repository</a>.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Author: Santiago Ontañón</span></div>
+                    </div>                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- DSL Wiki-->
+            <section class="resume-section" id="wiki">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">General Information and Wiki</h2>
+                    <p> We wrote a GitHub wiki with examples and guidance about the DSL and the framework developed to the competition as part of the MicroRTS wiki. We strongly suggest the 
+                        participants to check this wiki and examples to improve the expertise in the usability around and with the framework. See 
+                        <a href="https://github.com/santiontanon/microrts/wiki"  target="_blank">GitHub Wiki</a>.
+                    Bellow, we summarized some general information about the resources that are required in the competition and allowed the synthesizer.</p>
+                    <div class="subheading mb-3">Programming Languages and Resources</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Java language as default language."><i class="fab fa-java"></i></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Python allowed with sockets."><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Access to write in disk."><i class="fas fa-hdd"></i></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Multiples CPU's allowed."><i class="fas fa-server"></i></li>
+                        <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Multiples GB's of memory."><i class="fas fa-memory"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Competition's Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            The synthesizer will run for 24 hours in a specific map to synthesis a programmatic strategy.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            When all synthesizers finished the synthesis phase, all the programmatic strategies will be split by maps. 
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            The programmatic strategies are evaluated combining two scores: A score in a Round-Robin tournament against the other programmatic strategies in 
+                            the specific map and the score obtained in the interpretability evaluation.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            The winner of the competition is the synthesizer able to produce, in general, the best solution for each map.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="publications">
+                <!-- <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+                </div> -->
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Publications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-book text-warning"></i></span>
+                            Mariño, Julian R. H.; Moraes, Rubens O.; Oliveira, Tassiana C.; Toledo, Claudio; and Lelis, Levi H. S.  2021.  
+                            Programmatic Strategies for Real-Time Strategy Games. In Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence. AAAI.
+                        </li>                        
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="contact">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase">Contact</h2>
+                        <h3 class="section-subheading text-muted">Feel free to contact any of the organizers if you have any questions, suggestions, or comments.</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                                <!-- <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="" /> -->
+                                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/team/1.jpg" alt="" /></span>
+                                <h4>Santiago Ontañón</h4>
+                                <!-- <p class="text-muted">Lead Designer</p> -->                                                        
+                                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/santiontanon" target="_blank"><i class="fab fa-twitter"></i></a>                            
+                                <a class="btn btn-dark btn-social mx-2" href="https://sites.google.com/site/santiagoontanonvillar/" target="_blank"><i class="fas fa-home"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="mailto:santi.ontanon@gmail.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                                <!-- <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" /> -->
+                                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/team/2.jpg" alt="" /></span>
+                                <h4>Levi Lelis</h4>
+                                <!-- <p class="text-muted">Lead Marketer</p> -->
+                                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/levilelis" target="_blank"><i class="fab fa-twitter"></i></a>                            
+                                <a class="btn btn-dark btn-social mx-2" href="https://webdocs.cs.ualberta.ca/~santanad/" target="_blank"><i class="fas fa-home"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="mailto:levi.lelis@ualberta.ca" target="_blank"><i class="fas fa-envelope-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="team-member">
+                                <!-- <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" /> -->
+                                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/team/3.jpg" alt="" /></span>
+                                <h4>Rubens O. Moraes</h4>
+                                <!-- <p class="text-muted">Lead Developer</p> -->
+                                <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/rubensd09141948" target="_blank"><i class="fab fa-twitter"></i></a>                            
+                                <a class="btn btn-dark btn-social mx-2" href="https://rubensoliveiramoraes.wordpress.com/" target="_blank"><i class="fas fa-home"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="mailto:rubensolv@gmail.com" target="_blank"><i class="fas fa-envelope-square"></i></a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>               
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

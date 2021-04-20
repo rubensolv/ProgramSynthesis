@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SynProS - Synthesis of Programmatic Strategies</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- <link href="css/styles2.css" rel="stylesheet" /> -->
+        <!-- $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+          }) -->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">SynProS - Synthesis of Programmatic Strategies Competition</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#rules">Rules</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#microrts">MicroRTS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wiki">Wiki</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        SynProS
+                        <span class="text-primary">- Synthesis of Programmatic Strategies</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Welcome to the 1st MicroRTS Competition Track on Programmatic Strategies.                         
+                    </div>
+                    <h3 class="mb-2">Overview</h3>
+
+                    <p>SynProS is a track in the <a href="https://sites.google.com/site/micrortsaicompetition/home">MicroRTS AI Competition</a> and it follows the same principles and prizes described in the competition. 
+                        This track has been created to foster research in the synthesis of programmatic strategies (i.e., computer programs encoding strategies for playing games).  
+                        We provide a domain-specific language (DSL) for MicroRTS, which defines the space of possible strategies. Competitors will submit intelligent systems for synthesizing programmatic strategies using our DSL. </p>
+
+                    <p>
+                        The DSL can be described as the context-free grammar shown below, where S1 is the start symbol. The DSL accepts programs with branching and loops, and it implements a set of functions that assign actions to units in the game, such as "attack closest enemy." The DSL also implements Boolean functions such as "do I control 2 ranged units?". A detailed description of the functions implemented in the DSL can be found in <a href="https://github.com/santiontanon/microrts/wiki">MicroRTS's Wiki page</a>.
+                    </p>
+                    <img class="img-fluid" src="assets/img/dsl.png" alt =""/>
+                    <p> The MicroRTS codebase includes a framework that implements the DSL to be used as part of the synthesizer that will be created by the competitors. The repository's wiki contains examples and guidance about how to use the framework for this competition. The DSL shouldn't be changed by the competitors.</p>
+                    
+                    <div class="subheading mb-2">
+                        Important Dates                         
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1 July 2021</th>
+                                <td>Deadline for submitting synthesizers</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8 July 2021</th>
+                                <td>Deadline for submitting the GitHub repository with the description of the synthesizer<tr>
+                                
+                            </tr>                            
+                            <tr>
+                                <th scope="row">9 July 2021</th>
+                                <td>Confirmation of all the competitors accepted</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">30 July 2021</th>
+                                <td>Notification of results to authors</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="subheading mb-2">
+                        Organization                         
+                    </div>
+
+                    <p>Please contact us if you have questions about the competition.</p>
+
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <a href="https://rubensoliveiramoraes.wordpress.com/">Rubens Moraes</a> (Universidade Federal de Viçosa, Brazil)
+                        </li>
+                        <li>
+                            <a href="https://webdocs.cs.ualberta.ca/~santanad/">Levi Lelis</a> (University of Alberta, Canada)
+                        </li>                          
+                        <li>
+                            <a href="https://sites.google.com/site/santiagoontanonvillar/">Santiago Ontañón</a> (Google Research, USA)
+                        </li>      
+                    </ul>
+                    <br>
+
+
+<!--                     <div class="social-icons">
+                        <a class="social-icon" href="https://github.com/santiontanon/microrts" target="_blank"><i class="fab fa-github" ></i></a>
+                        <a class="social-icon" href="https://github.com/santiontanon/microrts/wiki" target="_blank"><i class="fab fa-wikipedia-w" ></i></a>
+                    </div>
+                    <br> -->
+                <!-- </div> -->
+            <!-- </section> -->
+            <!-- <hr class="m-0" /> -->
+            <!-- Experience-->
+            <!-- <section class="resume-section" id="rules"> -->
+                <!-- <div class="resume-section-content"> -->
+                    <!-- <h2 class="mb-5">Rules and Logistics</h2> -->
+                    <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5"> -->
+                        <!-- <div class="flex-grow-1"> -->
+                    <h3 class="mb-2">Competition Format and Resources Available</h3>
+
+                    <p> The synthesizers submitted to this track will be evaluated on the same maps used in the other tracks of the <a href="https://sites.google.com/site/micrortsaicompetition/home">competition</a>.
+                         Each participant is allowed to submit a synthesizer that will be used by the organizers to generate one programmatic strategy for each map. The programmatic strategy must be able to play on any starting location of the maps. 
+                         Each synthesizer will run for a limited amount of time for each map (see details in the table below). 
+
+                    </p>
+                    <p>
+                         The synthesizer must produce a programmatic strategy within the time limit. If the synthesizer fails to produce a strategy within the time limit or if it exhausts the memory allowed for synthesis, the entry will be assigned a penalty score equivalent to a number of defeats equal to the number of participants in the competition. 
+                    </p>
+                    
+                    <p>The same participant/group can submit multiple synthesizers to the competition. We encourage submissions of multiple synthesizers only when the synthesizers implement different ideas. Synthesizers submited by the same participant/group that aren't substantially different (e.g., differ on a set of parameters) will be disqualified by the organizers. 
+                    </p>
+
+                    <p>
+                        We will follow the same <a href="https://sites.google.com/site/micrortsaicompetition/rules">set of rules</a> used in the other tracks of the competition. The participants should read all rules before submitting their entries to the competition. 
+                    </p>
+                   
+                    <p>The competition will be run on machines running Linux. Each synthesizer will have access to 
+                        the following resources (the synthesizer will be run by the competition organizers):
+                    </p>
+                    <ul class="list-inline-item">
+                        <li>Time limit for each map: 24 hours.</li>
+                        <li>CPU usage: Maximum of 8 CPU's will be available to each synthesizer.</li>
+                        <li>Memory: Maximum of 16 GB's of memory.</li>
+                        <li>Disk Space: Maximum of 1 GB in disk.</li>
+                    </ul>
+                        <!-- </div> -->
+                    <!-- </div> -->
+<!--                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1"> -->
+                    <h3 class="mb-2">How to Submit Your Synthesizer</h3>
+
+                    <p>
+                        The participants can either submit your entire project or just the code of your synthesizer. The participants should follow the steps below to submit their synthesizer. 
+                    </p>
+                    <ul class="list-inline-item">
+                        <li><b>Step 1.</b> Check if your synthesizer implements a serialized file (using the class SerializableController to save your programmatic strategy) as output. This file needs to be compatible with the original framework, which means that you can't include new commands or changes the DSL. 
+                        </li>
+                        <li><b>Step 2.</b> Upload your project to a public GitHub repository. If the project uploaded to GitHub contains all we need to run the synthesizer, then jump to step 4.</li>
+                        <li><b>Step 3.</b> If you need to add libraries, folders, or other resources, compact all we need to run your synthesizer in a zip file.</li>
+                        <li><b>Step 4.</b> Send the link to your GitHub repository and the zip file with additional resources to rubens.moraes@ufv.br. Please include in the email any additional instruction needed to run your synthesizer. 
+                        </li>                                
+                    </ul>
+                    <p> The artifacts sent to the competition will be tested before the competition starts and the participants will be contacted if any issues arise. </p>
+<!--                         </div>
+                    </div> -->
+<!-- 
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1"> -->
+                    <h3 class="mb-2">Score and Classification</h3>
+                    <p>The score of a synthesizer on a map is computed as follows:</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr >
+                                <th scope="col" >Map Score = Winning Rate - (Winning Rate x 0.4 x Non-Interpretability Penalty)</th>                                        
+                            </tr>
+                        </thead>                                
+                    </table>
+                    <p>
+                        We explain below how winning rate and non-interpretability penalty are computed. The final score of a synthesizer is the average of the scores on all maps. The synthesizer with highest final score will be the winner of this track. 
+                    </p>
+                    <p>
+                        The table below shows an example of how the final score of a synthesizer is computed if two maps are used. 
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Map</th>               
+                                <th scope="col">Winning Rate</th>
+                                <th scope="col">Interpretability Penalty</th>
+                                <th scope="col">Map Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">map 1</th>
+                                <td>90.8</td>
+                                <td>0.0</td>
+                                <td>94.48</td>
+                            </tr>                                    
+                            <tr >
+                                <th scope="row">map 2</th>
+                                <td>82.4</td>
+                                <td>0.94</td>
+                                <td>51.42</td>                                        
+                            </tr>                                    
+                        </tbody>                                
+                        <thead>
+                            <tr>
+                                <th scope="col">Total Score</th>                                        
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">72.95</th>
+                            </tr>
+                        </thead>
+                    </table>                                                        
+                    <div class="subheading mb-2">Winning Rate</div>                            
+                    <p>The winning rate is defined by the score in a round-robin tournament among all the entries. See the <a href="https://sites.google.com/site/micrortsaicompetition/rules"  target="_blank">MicroRTS Competition rules page</a> for more information.
+                    </p>
+
+                    <div class="subheading mb-2">Non-Interpretability Penalty</div>
+                    <p>
+                        Interpretability of the synthesized strategies is key in this track. We approximate the interpretability of a strategy with the size of the program encoding the strategy. Smaller programs will be deemed as more interpretable. The non-interpretability penalty used in the map score formula is computed based on the number of instructions used in the strategiy. If a strategy uses 10 or fewer instructions, then its non-interpretability penalty is 0.0. The penalty is increased by 0.01 for each instruction above 10, to a maximum of non-interpretability penalty of 1.0, as summarized in the table below. 
+                    </p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Number of Instructions</th>
+                                <th scope="col">Non-Interpretability Penalty</th>                                        
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-info">
+                                <th scope="row">less than or equal to 10</th>
+                                <td>0.0</td>
+                            </tr>                                    
+                            <tr class="table-warning">
+                                <th scope="row">Each instruction above 10 increases the penalty in</th>
+                                <td>0.01</td>                                        
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">100 or more</th>
+                                <td>1.0</td>                                        
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        Let's consider the following example of a programmatic strategy for playing MicroRTS. 
+                        <pre>
+                            for(u):
+                                if not HaveUnitsStrongest(Heavy,u):
+                                    harvest(1,u)
+                            for(u): 
+                                if not HaveQtdEnemiesbyType(Heavy,9):
+                                    attack(Worker,closest,u)
+                                    if not HaveUnitsStrongest(Ranged,u):
+                                        moveaway(Worker,u)
+                                        train(Worker,4,Right)
+                        </pre>
+
+                        The program uses 12 instructions: 2 for-loops, 3 ifs, 3 Boolean expressions, 4 commands that return actions. The non-interpretability score of this strategy is 0.02. 
+                    </p>
+
+                    <h3 class="mb-2">Related Publications</h3>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            Mariño, Julian R. H.; Moraes, Rubens O.; Oliveira, Tassiana C.; Toledo, Claudio; and Lelis, Levi H. S.  2021.  
+                            <a href="https://webdocs.cs.ualberta.ca/~santanad/papers/2021/marinoMOTL21.pdf">Programmatic Strategies for Real-Time Strategy Games.</a> In Proceedings of the Thirty-Fifth AAAI Conference on Artificial Intelligence. AAAI.
+                        </li>                        
+                    </ul>
+
+<!--                         </div>
+                    </div>   -->                                                                                 
+<!--                 </div>
+            </section>
+            <hr class="m-0" />
+            <section class="resume-section" id="wiki">
+                <div class="resume-section-content"> -->
+                    
+                </div>
+            </section>
+           
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
