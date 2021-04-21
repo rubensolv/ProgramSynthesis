@@ -50,14 +50,13 @@
                     <h3 class="mb-2">Overview</h3>
 
                     <p>SynProS is a track in the <a href="https://sites.google.com/site/micrortsaicompetition/home">MicroRTS AI Competition</a> that follows the same principles and prizes described in the competition. 
-                        This track has been created to foster research in programmatic strategies (i.e., computer programs encoding strategies for playing games).  
-                        We provide a domain-specific language (DSL) for MicroRTS, which defines the space of possible strategies for plyaing the game. Competitors will submit intelligent systems able to synthesize computer programs encoding strategies for playing the game. </p>
+                        This track has been created to foster research in explainable AI in computer games. We provide a domain-specific language (DSL) for MicroRTS, which defines the space of possible strategies for playing the game. Competitors submit intelligent systems able to synthesize computer programs in our DSL that encode strategies for playing MicroRTS. The synthesized strategies will be evaluated in terms of their strength of play and their interpretability. </p>
 
                     <p>
-                        The DSL can be described as a context-free grammar (see below), where S1 is the start symbol. The DSL accepts programs with branching and loops, and it implements a set of functions that assign actions to units in the game, such as "attack closest enemy." The DSL also implements Boolean functions such as "do I control 2 ranged units?". A detailed description of the functions implemented in the DSL can be found in <a href="https://github.com/santiontanon/microrts/wiki">MicroRTS's Wiki page</a>.
+                        The DSL can be described as a context-free grammar (see below), where S1 is the start symbol. The DSL accepts programs with branching and loops, and it implements a set of functions that assign actions to units in the game, such as "attack the closest enemy." The DSL also implements Boolean functions such as "do I control 2 ranged units?". A detailed description of the functions implemented in the DSL can be found in <a href="https://github.com/santiontanon/microrts/wiki">MicroRTS's Wiki page</a>.
                     </p>
                     <img class="img-fluid" src="assets/img/dsl.png" alt =""/>
-                    <p> The MicroRTS codebase includes a framework that implements the DSL to be used as part of the synthesizer that will be created by the competitors. The repository's wiki contains examples of how the software can be used to develop synthesizers.</p>
+                    <p> The MicroRTS codebase includes a framework that implements the DSL to be used as part of the synthesizer that will be created by the competitors. The repository's <a href="https://github.com/santiontanon/microrts/wiki">wiki</a> contains examples of how the software can be used to develop synthesizers.</p>
                     <br>
                     <div class="subheading mb-2">
                         Important Dates                         
