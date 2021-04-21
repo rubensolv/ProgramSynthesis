@@ -49,15 +49,15 @@
                     </div>
                     <h3 class="mb-2">Overview</h3>
 
-                    <p>SynProS is a track in the <a href="https://sites.google.com/site/micrortsaicompetition/home">MicroRTS AI Competition</a> and it follows the same principles and prizes described in the competition. 
-                        This track has been created to foster research in the synthesis of programmatic strategies (i.e., computer programs encoding strategies for playing games).  
-                        We provide a domain-specific language (DSL) for MicroRTS, which defines the space of possible strategies. Competitors will submit intelligent systems for synthesizing programmatic strategies using our DSL. </p>
+                    <p>SynProS is a track in the <a href="https://sites.google.com/site/micrortsaicompetition/home">MicroRTS AI Competition</a> that follows the same principles and prizes described in the competition. 
+                        This track has been created to foster research in programmatic strategies (i.e., computer programs encoding strategies for playing games).  
+                        We provide a domain-specific language (DSL) for MicroRTS, which defines the space of possible strategies for plyaing the game. Competitors will submit intelligent systems able to synthesize computer programs encoding strategies for playing the game. </p>
 
                     <p>
-                        The DSL can be described as the context-free grammar shown below, where S1 is the start symbol. The DSL accepts programs with branching and loops, and it implements a set of functions that assign actions to units in the game, such as "attack closest enemy." The DSL also implements Boolean functions such as "do I control 2 ranged units?". A detailed description of the functions implemented in the DSL can be found in <a href="https://github.com/santiontanon/microrts/wiki">MicroRTS's Wiki page</a>.
+                        The DSL can be described as a context-free grammar (see below), where S1 is the start symbol. The DSL accepts programs with branching and loops, and it implements a set of functions that assign actions to units in the game, such as "attack closest enemy." The DSL also implements Boolean functions such as "do I control 2 ranged units?". A detailed description of the functions implemented in the DSL can be found in <a href="https://github.com/santiontanon/microrts/wiki">MicroRTS's Wiki page</a>.
                     </p>
                     <img class="img-fluid" src="assets/img/dsl.png" alt =""/>
-                    <p> The MicroRTS codebase includes a framework that implements the DSL to be used as part of the synthesizer that will be created by the competitors. The repository's wiki contains examples and guidance about how to use the framework for this competition. The DSL shouldn't be changed by the competitors.</p>
+                    <p> The MicroRTS codebase includes a framework that implements the DSL to be used as part of the synthesizer that will be created by the competitors. The repository's wiki contains examples of how the software can be used to develop synthesizers.</p>
                     <br>
                     <div class="subheading mb-2">
                         Important Dates                         
@@ -125,6 +125,10 @@
                             </p>
                             <p>
                                 The synthesizer must produce a programmatic strategy within the time limit. If the synthesizer fails to produce a strategy within the time limit or if it exhausts the memory allowed for synthesis, the entry will be assigned a penalty score equivalent to a number of defeats equal to the number of participants in the competition. 
+                            </p>
+
+                            <p>
+                                In this first installment of the competition the participants aren't allowed to change the DSL provided by the organizers. Participants using a modified DSL will be disqualified from the competition. 
                             </p>
                             
                             <p>The same participant/group can submit multiple synthesizers to the competition. We encourage submissions of multiple synthesizers only when the synthesizers implement different ideas. Synthesizers submited by the same participant/group that aren't substantially different (e.g., differ on a set of parameters) will be disqualified by the organizers. 
