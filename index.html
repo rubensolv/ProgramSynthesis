@@ -196,7 +196,7 @@
                                         <th scope="row">map 1</th>
                                         <td>90.8</td>
                                         <td>0.0</td>
-                                        <td>94.48</td>
+                                        <td>90.8</td>
                                     </tr>                                    
                                     <tr >
                                         <th scope="row">map 2</th>
@@ -210,7 +210,7 @@
                                         <th scope="col">Total Score</th>                                        
                                         <th scope="col"></th>
                                         <th scope="col"></th>
-                                        <th scope="col">72.95</th>
+                                        <th scope="col">71.11</th>
                                     </tr>
                                 </thead>
                             </table>                 
@@ -256,9 +256,9 @@
                                     for(u): 
                                         if not HaveQtdEnemiesbyType(Heavy,9):
                                             attack(Worker,closest,u)
-                                            if not HaveUnitsStrongest(Ranged,u):
-                                                moveaway(Worker,u)
-                                                train(Worker,4,Right)
+                                        if not HaveUnitsStrongest(Ranged,u):
+                                            moveaway(Worker,u)
+                                            train(Worker,4,Right)
                                 </pre>
                                 The program uses 12 instructions: 2 for-loops, 3 ifs, 3 Boolean expressions, 4 commands that return actions. The non-interpretability score of this strategy is 0.02. 
                             </p>  
